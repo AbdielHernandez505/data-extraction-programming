@@ -3,8 +3,7 @@
 # Fecha: 08 de febrero de 2026
 # Descripción: Simula el historial de
 # cambios en una hoja de cálculo, donde los usuarios pueden realizar cambios
-# en las celdas. Usa una lista como pila para almacenar los cambios y permite
-# a los usuarios deshacer múltiples cambios.
+# en las celdas. Usa una lista como pila para almacenar los cambios y permite a los usuarios deshacer múltiples cambios.
 
 hoja = {}
 historial = []
