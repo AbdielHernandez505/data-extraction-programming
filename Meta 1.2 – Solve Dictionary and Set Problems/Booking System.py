@@ -1,4 +1,11 @@
-
+# Nombre: Hernández Duran Jair Abdiel
+# Grupo: 951
+# Fecha: 15 de febrero de 2026
+# Descripción: Desarrolla un sistema de reservas utilizando sets. Crea
+# conjuntos para representar habitaciones disponibles y habitaciones reservadas en
+# un hotel. Permite a los usuarios realizar reservas, liberar habitaciones y mostrar la
+# disponibilidad actual. NOTA: No utilizar menú, solo las funciones a realizar las
+# pruebas necesarias para verificar funcionamiento adecuado.
 
 def crear():
     disponible = {101,102,103,104,105,106,107}
