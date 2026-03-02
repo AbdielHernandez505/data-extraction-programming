@@ -81,7 +81,7 @@ def webscraping_amazon(producto, numero_paginas):
             print("No hay más páginas disponibles.")
             break
 
-    navegador.quit()
+    navegador.close()
 
     # Crear DataFrame
     df = pd.DataFrame(data)
