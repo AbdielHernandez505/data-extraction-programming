@@ -35,7 +35,7 @@ def login():
     navegador.close()
 
 def loginv2():
-    user = "2standard_user"
+    user = "standard_user"
     password = "secret_sauce"
 
     s = Service(ChromeDriverManager().install())

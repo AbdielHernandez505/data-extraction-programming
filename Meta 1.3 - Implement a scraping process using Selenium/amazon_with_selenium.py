@@ -53,7 +53,7 @@ def buscar():
         time.sleep(2)
         btn = navegador.find_element(By.CLASS_NAME, "s-pagination-next") # busca el elemento del boton "siguiennte"
 
-        btn.click() # hace clic en el boton
+        btn.click() # hace clic en el botón
         time.sleep(2)
         navegador.save_screenshot(f"images/pagina_{i+2}.png") # guarda la captura,
         time.sleep(2)                                           # el +2 porque ya inicializamos las capturas, sino se remplazaria.
