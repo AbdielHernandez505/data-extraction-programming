@@ -1,7 +1,7 @@
 # Nombre: Hernandez Duran Jair Abdiel
 # Grupo: 951
 # Fecha: 15 de marzo de 2026
-# Descripción: Ejercicios de preprocesamiento de datos: manejo de duplicados
+# Descripción: Ejercicios de procesamiento de datos: manejo de duplicados
 #              y valores nulos utilizando pandas DataFrames.
 
 import pandas as pd
