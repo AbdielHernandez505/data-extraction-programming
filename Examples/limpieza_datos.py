@@ -9,7 +9,7 @@ def crear_df_sucio():
         'salario': ["$10000", "12355", "2605999mxn", "$12,000"],
         'fecha': ["10-03-26", "19/03/26", "March 17 2026", "invalid"],
         'pais': ["México", "mexico", "MX", " usa"],
-        'activo': ["yes", "no", "yes", "no"]
+        'activo': ["yes", "no", "yes", "invalid"]
 
     }
     df = pd.DataFrame(data)
@@ -40,19 +40,25 @@ def fechas(df):
 
 def categoricos(df):
     df.pais = df.pais.astype("category")
+    df["cat_code"] = df.pais.cat.codes
 
+def binario(df):
+    df.activo = df.activo.str.strip().str.lower()
+    df.activo = df.activo.map({
+        "yes": True,
+        "no": False,
+        "invalid": False
+    })
 
 
 if __name__ == '__main__':
     df = crear_df_sucio()
 
     cadenas(df)
-    print("########################")
     numericos(df)
-    print("########################")
     fechas(df)
-    print("########################")
     categoricos(df)
+    binario(df)
     print("########################")
     print(df)
     print("########################")
