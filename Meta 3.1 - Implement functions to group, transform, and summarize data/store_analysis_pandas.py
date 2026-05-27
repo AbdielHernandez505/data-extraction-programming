@@ -29,19 +29,55 @@ def map_codes(df):
 
 
 def total_sales(df):
-    pass
+    df["Venta Total"] = df["Precio"] * df["Cantidad Vendida"]
+
+    ventas_tienda = df.groupby("Tienda").agg(
+        total_ventas=("Venta Total", "sum")
+    )
+
+    print("Total de ventas por tienda:")
+    print(ventas_tienda)
+    print("=========================================================================")
 
 
 def avg_price(df):
-    pass
+    precio_promedio = df.groupby("Tienda").agg(
+        precio_promedio=("Precio", "mean")
+    )
+
+    print("Precio promedio por tienda:")
+    print(precio_promedio)
+    print("=========================================================================")
 
 
 def qty_pivot(df):
-    pass
+    tabla_cantidad = pd.pivot_table(
+        df,
+        values="Cantidad Vendida",
+        index="Producto",
+        columns="Tienda",
+        aggfunc="sum"
+    )
+
+    print("Cantidad vendida por producto y tienda:")
+    print(tabla_cantidad)
+    print("=========================================================================")
 
 
 def sales_pivot(df):
-    pass
+    df["Venta Total"] = df["Precio"] * df["Cantidad Vendida"]
+
+    tabla_ventas = pd.pivot_table(
+        df,
+        values="Venta Total",
+        index="Producto",
+        columns="Tienda",
+        aggfunc="sum"
+    )
+
+    print("Total de ventas por producto y tienda:")
+    print(tabla_ventas)
+    print("=========================================================================")
 
 
 if __name__ == "__main__":
